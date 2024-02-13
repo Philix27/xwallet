@@ -1,0 +1,19 @@
+syntax = "proto3";
+package Auth;
+
+import "./user.proto";
+
+
+service Verification {
+    rpc verify_email(VerifyEmailRequest) returns (VerifyEmailResponse);
+}
+
+
+
+message VerifyEmailResponse {
+    bool isValid = 1;
+    user.User user = 2;
+}
+message VerifyEmailRequest {
+    bool isValid = 1;
+}

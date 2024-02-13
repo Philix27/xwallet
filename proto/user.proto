@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package User;
+
+
+message User {}
+message CreateUserRequest {}
+message CreateUserResponse {}
+
+service Verification {
+    rpc create_user(CreateUserRequest) returns (CreateUserResponse);
+}

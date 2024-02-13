@@ -19,7 +19,7 @@ struct Human {
 }
 
 #[derive(GraphQLInputObject)]
-#[graphql(description = "A humanoid creature in the Star Wars universe")]
+#[graphql(description = "A humanoid creature in the Star wars universe")]
 struct NewHuman {
     name: String,
     appears_in: Vec<Episode>,

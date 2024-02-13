@@ -2,9 +2,10 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct CryptoNetwork {
-    name: String,
-    chain_id: String,
-    rpc_url: String,
+    pub id: i64,
+    pub name: String,
+    pub chain_id: String,
+    pub rpc_url: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]

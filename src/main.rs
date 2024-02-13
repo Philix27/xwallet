@@ -1,3 +1,4 @@
+mod config;
 mod models;
 mod routes;
 mod schema;
@@ -6,17 +7,17 @@ mod services;
 use actix_cors::Cors;
 use actix_web::{get, middleware, route, web, App, HttpResponse, HttpServer, Responder};
 use actix_web_lab::respond::Html;
-
-use crate::schema::Schema;
 use juniper::http::{graphiql::graphiql_source, GraphQLRequest};
-use routes::wallet;
+
+use crate::config::logger;
+use crate::schema::Schema;
+use crate::routes::wallet;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     let port = "9000";
 
-    dotenvy::dotenv().ok();
-    env_logger::init_from_env(env_logger::Env::new().default_filter_or("info"));
+    config::logger::init();
     // let pool = get_db_pool();
     log::info!("starting HTTP server on port {}", port);
     log::info!("GraphiQL playground: http://localhost:{}/graphiql", port);
