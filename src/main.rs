@@ -1,4 +1,5 @@
 mod config;
+mod integration;
 mod models;
 mod routes;
 mod schema;
@@ -10,8 +11,8 @@ use actix_web_lab::respond::Html;
 use juniper::http::{graphiql::graphiql_source, GraphQLRequest};
 
 use crate::config::logger;
-use crate::schema::Schema;
 use crate::routes::wallet;
+use crate::schema::Schema;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
