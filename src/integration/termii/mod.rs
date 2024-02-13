@@ -33,3 +33,8 @@ pub struct PhoneResponse {
     pub balance: u64,
     pub user: String,
 }
+
+pub trait ITermii {
+    async fn send_msg_to_phone(body: PhoneBody) -> Result<PhoneResponse, Error>;
+    async fn send_bulk_msg_to_phone() -> String;
+}

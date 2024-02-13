@@ -5,14 +5,12 @@ mod routes;
 mod schema;
 mod services;
 
+use crate::routes::wallet;
+use crate::schema::Schema;
 use actix_cors::Cors;
 use actix_web::{get, middleware, route, web, App, HttpResponse, HttpServer, Responder};
 use actix_web_lab::respond::Html;
 use juniper::http::{graphiql::graphiql_source, GraphQLRequest};
-
-use crate::config::logger;
-use crate::routes::wallet;
-use crate::schema::Schema;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
