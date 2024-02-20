@@ -5,8 +5,7 @@ mod routes;
 mod schema;
 mod services;
 
-use crate::routes::wallet;
-use crate::schema::Schema;
+use crate::{routes::wallet, schema::Schema};
 use actix_cors::Cors;
 use actix_web::{get, middleware, route, web, App, HttpResponse, HttpServer, Responder};
 use actix_web_lab::respond::Html;
