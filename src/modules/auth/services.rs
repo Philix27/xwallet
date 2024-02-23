@@ -1,17 +1,14 @@
-pub struct AuthRoutes;
+pub struct AuthServices;
 
-use super::traits::IAuth;
-use super::services as auth;
-
-impl AuthRoutes {
+impl AuthServices {
     pub async fn index() -> String {
-        format!("Welcome to XWallet Sever")
+        format!("Auth Service")
     }
 }
 
-impl IAuth for AuthRoutes {
+impl super::traits::IAuth for AuthServices {
     async fn index() -> String {
-        auth::AuthServices::index().await
+        todo!()
     }
 
     async fn send_email_otp() {
