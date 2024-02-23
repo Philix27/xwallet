@@ -1,6 +1,6 @@
-use super::country::Country;
 use chrono::{DateTime, Utc};
 use serde::{Deserialize, Serialize};
+use crate::models::country::Country;
 
 #[derive(Deserialize, Serialize)]
 #[serde(rename_all = "camelCase")]
@@ -30,3 +30,4 @@ enum UserVerificationStatus {
     Verified,
     UnderReview,
 }
+
