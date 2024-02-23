@@ -1,3 +1,5 @@
+use crate::models::country::{list::Countries, Country};
+
 pub struct AuthServices;
 
 impl AuthServices {
@@ -8,26 +10,33 @@ impl AuthServices {
 
 impl super::traits::IAuth for AuthServices {
     async fn index() -> String {
-        todo!()
+        let count = Country {
+            name: Countries::Nigeria,
+            phone: String::from("+234"),
+            abr: String::from("NGN"),
+            state: vec![],
+        };
+        let serial = serde_json::to_string(&count).unwrap();
+        format!("Get all  countries! {}", serial)
     }
 
-    async fn send_email_otp() {
-        todo!()
+    async fn verify_phone_otp() -> &'static str {
+        "verify_phone_otp"
     }
 
-    async fn send_phone_otp() {
-        todo!()
+    async fn send_phone_otp() -> &'static str {
+        "send_phone_otp!"
     }
 
-    async fn create_user() {
-        todo!()
+    async fn create_user() -> &'static str {
+        "create_user!"
     }
 
-    async fn verify_email_otp() {
-        todo!()
+    async fn verify_email_otp() -> &'static str {
+        "verify_email_otp!"
     }
 
-    async fn verify_phone_otp() {
-        todo!()
+    async fn send_email_otp() -> &'static str {
+        "send_email_otp!"
     }
 }

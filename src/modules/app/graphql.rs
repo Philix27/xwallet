@@ -1,6 +1,6 @@
 use actix_web::{Error, HttpResponse, Responder};
 use juniper_actix::{graphiql_handler, playground_handler};
-use sqlx::Database;
+
 pub struct AppGraphql;
 
 impl AppGraphql {

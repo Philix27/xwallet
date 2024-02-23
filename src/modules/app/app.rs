@@ -1,3 +1,4 @@
+use crate::modules::auth::AuthRoutes;
 use crate::modules::wallet::WalletRoutes;
 use actix_cors::Cors;
 use actix_web::{http::header, middleware, web, App, HttpServer};
@@ -11,6 +12,7 @@ impl AppState {
         HttpServer::new(|| {
             App::new()
                 .wrap(middleware::Logger::default())
+                // Loggers
                 .wrap(
                     Cors::default()
                         .allow_any_origin()
@@ -20,7 +22,10 @@ impl AppState {
                         .allowed_header(header::CONTENT_TYPE)
                         .max_age(3000),
                 )
+                // Handlers
                 .service(WalletRoutes::routes_handler())
+                .service(AuthRoutes::routes_handler())
+                // Graphql
                 .service(
                     web::resource("/graphql")
                         .route(web::post().to(AppGraphql::graphiql))
