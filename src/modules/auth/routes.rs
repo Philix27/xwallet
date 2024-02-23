@@ -1,13 +1,6 @@
-pub struct AuthRoutes;
-
-use super::traits::IAuth;
 use super::services as auth;
-
-impl AuthRoutes {
-    pub async fn index() -> String {
-        format!("Welcome to XWallet Sever")
-    }
-}
+use super::traits::IAuth;
+pub struct AuthRoutes;
 
 impl IAuth for AuthRoutes {
     async fn index() -> String {
@@ -18,7 +11,15 @@ impl IAuth for AuthRoutes {
         todo!()
     }
 
+    async fn verify_email_otp() {
+        todo!()
+    }
+
     async fn send_phone_otp() {
+        todo!()
+    }
+
+    async fn verify_phone_otp() {
         todo!()
     }
 

@@ -22,4 +22,12 @@ impl super::traits::IAuth for AuthServices {
     async fn create_user() {
         todo!()
     }
+
+    async fn verify_email_otp() {
+        todo!()
+    }
+
+    async fn verify_phone_otp() {
+        todo!()
+    }
 }
