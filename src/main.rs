@@ -1,11 +1,10 @@
 mod config;
 mod integration;
 mod models;
-mod routes;
 mod schema;
-mod services;
+mod modules;
 
-use crate::{routes::wallet, schema::Schema};
+use crate::{schema::Schema, modules::wallet::WalletRoutes};
 use actix_cors::Cors;
 use actix_web::{get, middleware, route, web, App, HttpResponse, HttpServer, Responder};
 use actix_web_lab::respond::Html;
@@ -24,7 +23,7 @@ async fn main() -> std::io::Result<()> {
         App::new()
             .wrap(middleware::Logger::default())
             .wrap(Cors::permissive())
-            .service(wallet::routes_handler())
+            .service(WalletRoutes::routes_handler())
             .service(graphql)
             .service(graphql_playground)
     })
