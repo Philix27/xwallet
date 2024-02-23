@@ -18,6 +18,7 @@ dotenvy = "0.15.6"
 env_logger = "0.11"
 diesel = { version = "2.1.3", features = ["postgres", "chrono"] }
 juniper = "0.15.12"
+juniper_actix = "0.4.0"
 # tokio = {version = "1.36.0", features = ["macros", "rt-multi-thread"]}
 tonic = "0.11.0"
 prost = "0.12.3"
