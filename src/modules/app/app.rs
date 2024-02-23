@@ -1,4 +1,7 @@
-use crate::modules::{auth::AuthRoutes, transactions::TransactionsRoutes, wallet::WalletRoutes};
+use crate::modules::{
+    auth::AuthRoutes, compliance::ComplianceRoutes, transactions::TransactionsRoutes,
+    wallet::WalletRoutes,
+};
 use actix_cors::Cors;
 use actix_web::{http::header, middleware, web, App, HttpServer};
 
@@ -25,6 +28,7 @@ impl AppState {
                 .service(WalletRoutes::routes_handler())
                 .service(AuthRoutes::routes_handler())
                 .service(TransactionsRoutes::routes_handler())
+                .service(ComplianceRoutes::routes_handler())
                 // Graphql
                 .service(
                     web::resource("/graphql")
