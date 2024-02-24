@@ -4,11 +4,11 @@ mod models;
 mod modules;
 mod schema;
 
-use crate::modules::app::AppState;
+use crate::{config::AppEnv, modules::app::AppState};
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    let port = "9000";
+    let port = &AppEnv::get_port()[..];
 
     let _ = config::logger::init();
     // let pool = get_db_pool();
