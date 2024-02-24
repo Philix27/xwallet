@@ -4,11 +4,12 @@ mod models;
 mod modules;
 mod schema;
 
-use crate::{config::AppEnv, modules::app::AppState};
+use crate::{config::APP_ENV, modules::app::AppState};
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    let port = &AppEnv::get_port()[..];
+    dotenvy::dotenv().expect("Failed to load .env");
+    let port = &APP_ENV.port[..];
 
     let _ = config::logger::init();
     // let pool = get_db_pool();

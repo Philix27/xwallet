@@ -1,4 +1,7 @@
-use actix_web::web::Json;
+use std::error::Error;
+
+use actix_web::{dev::ServiceRequest, web::Json};
+use actix_web_httpauth::extractors::bearer::BearerAuth;
 
 use crate::models::country::{list::Countries, Country};
 
@@ -9,6 +12,13 @@ pub struct AuthServices;
 impl AuthServices {
     pub async fn index() -> String {
         format!("Auth Service")
+    }
+    pub async fn middleware_validator(
+        req: ServiceRequest,
+        credentials: BearerAuth,
+    ) -> Result<ServiceRequest, (dyn Error, ServiceRequest)> {
+
+        Err(" ")
     }
 }
 
@@ -40,7 +50,7 @@ impl super::traits::IAuth for AuthServices {
         "verify_email_otp!"
     }
 
-    async fn send_email_otp(body:  Json<dtos::SendEmailDto>) -> String {
+    async fn send_email_otp(body: Json<dtos::SendEmailDto>) -> String {
         format!("send_email_otp!")
     }
 }

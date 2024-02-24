@@ -14,3 +14,8 @@ impl Display for SendEmailDto {
         Ok(())
     }
 }
+
+#[derive(Serialize, Deserialize, Clone)]
+pub struct TokenClaims {
+    pub id: i32,
+}
