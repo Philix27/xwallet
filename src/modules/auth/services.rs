@@ -1,4 +1,8 @@
+use actix_web::web::Json;
+
 use crate::models::country::{list::Countries, Country};
+
+use super::dtos;
 
 pub struct AuthServices;
 
@@ -36,7 +40,7 @@ impl super::traits::IAuth for AuthServices {
         "verify_email_otp!"
     }
 
-    async fn send_email_otp() -> &'static str {
-        "send_email_otp!"
+    async fn send_email_otp(body:  Json<dtos::SendEmailDto>) -> String {
+        format!("send_email_otp!")
     }
 }

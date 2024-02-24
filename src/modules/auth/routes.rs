@@ -1,7 +1,7 @@
-use actix_web::web;
+use actix_web::web::{self, Json};
 
-use super::services as auth;
 use super::traits::IAuth;
+use super::{dtos, services as auth};
 pub struct AuthRoutes;
 
 impl AuthRoutes {
@@ -21,8 +21,8 @@ impl IAuth for AuthRoutes {
         auth::AuthServices::index().await
     }
 
-    async fn send_email_otp() -> &'static str {
-        "send_email_otp"
+    async fn send_email_otp(body: Json<dtos::SendEmailDto>) -> String {
+        format!("send_email_otp: Body of query {}", body.msg)
     }
 
     async fn verify_email_otp() -> &'static str {

@@ -7,7 +7,7 @@ use actix_web::{http::header, middleware, web, App, HttpServer};
 
 use super::graphql::AppGraphql;
 
-pub struct AppState;
+pub struct AppState; 
 
 impl AppState {
     pub async fn run_server(port: &str) -> Result<(), std::io::Error> {
