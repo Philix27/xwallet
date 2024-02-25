@@ -1,13 +1,8 @@
-[07:19:09][xwallet::config::logger][INFO] INFO output enabled
-[07:19:09][xwallet::config::logger][WARN] WARN output enabled
-[07:19:09][xwallet::config::logger][ERROR] ERROR output enabled
-[07:19:09][xwallet][INFO] starting HTTP server on port 6000
-[07:19:09][xwallet][INFO] GraphiQL playground: http://localhost:6000/graphiql
-[07:19:09][actix_server::builder][INFO] starting 2 workers
-[07:19:09][actix_server::server][INFO] Actix runtime found; starting in Actix runtime
-[07:21:57][actix_web::middleware::logger][INFO] 127.0.0.1 "POST /auth/send_email_otp HTTP/1.1" 200 39 "-" "Thunder Client (https://www.thunderclient.com)" 0.000670
-[07:22:33][actix_web::middleware::logger][INFO] 127.0.0.1 "POST /auth/send_email_otp HTTP/1.1" 200 39 "-" "Thunder Client (https://www.thunderclient.com)" 0.000535
-[18:24:20][actix_server::server][INFO] SIGINT received; starting forced shutdown
-[18:24:20][actix_server::accept][INFO] accept thread stopped
-[18:24:20][actix_server::worker][INFO] shutting down idle worker
-[18:24:20][actix_server::worker][INFO] shutting down idle worker
+[19:34:40][xwallet::config::logger][INFO] INFO output enabled
+[19:34:40][xwallet::config::logger][WARN] WARN output enabled
+[19:34:40][xwallet::config::logger][ERROR] ERROR output enabled
+[19:34:40][xwallet][INFO] starting HTTP server on port 6000
+[19:34:40][xwallet][INFO] GraphiQL playground: http://localhost:6000/graphiql
+[19:34:40][actix_server::builder][INFO] starting 2 workers
+[19:34:40][actix_server::server][INFO] Actix runtime found; starting in Actix runtime
+[19:36:19][actix_web::middleware::logger][INFO] 127.0.0.1 "POST /auth/send_email_otp HTTP/1.1" 200 39 "-" "Thunder Client (https://www.thunderclient.com)" 0.000537

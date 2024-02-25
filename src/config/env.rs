@@ -19,5 +19,3 @@ impl AppEnv {
         }
     }
 }
-
-const V: String = std::env::var("PORT").unwrap_or("7000".to_string());

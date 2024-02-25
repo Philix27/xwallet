@@ -1,11 +1,12 @@
+use super::{api_docs::ApiDocs, graphql::AppGraphql};
 use crate::modules::{
     AuthRoutes, ComplianceRoutes, FxRoutes, PaymentRoutes, TransactionsRoutes, UserRoutes,
     WalletRoutes,
 };
 use actix_cors::Cors;
 use actix_web::{http::header, middleware, web, App, HttpServer};
-
-use super::graphql::AppGraphql;
+use utoipa::OpenApi;
+use utoipa_swagger_ui::SwaggerUi;
 
 pub struct AppState;
 
@@ -40,7 +41,12 @@ impl AppState {
                 )
                 .service(web::resource("/playground").route(web::get().to(AppGraphql::playground)))
                 .service(web::resource("/graphiql").route(web::get().to(AppGraphql::graphiql)))
-                .default_service(web::to(AppGraphql::homepage))
+                // Swagger
+                .service(
+                    SwaggerUi::new("/swagger-ui/{_:.*}"),
+                    // .url("/api-docs/openapi.json", ApiDocs::openapi()),
+                )
+                .default_service(web::to(AppGraphql::homepage)) 
         })
         .workers(2)
         .bind(("127.0.0.1", port.parse().unwrap()))?
