@@ -1,21 +1,17 @@
-use super::traits::IFx;
+use super::traits::IFxRoutes;
 
 pub struct FxService;
 
-impl IFx for FxService {
-    async fn provide_personal_details() -> &'static str {
-        "provide_personal_details"
+impl IFxRoutes for FxService {
+    async fn get_currencies() -> &'static str {
+        "get_currencies"
     }
 
-    async fn provide_bank_details() -> &'static str {
-        "provide_bank_details"
+    async fn get_exchanges() -> &'static str {
+        "get_exchanges"
     }
 
-    async fn compliance_status() -> &'static str {
-        "compliance_status"
-    }
-
-    async fn provide_documents() -> &'static str {
-        "provide_documents"
+    async fn get_exchange_rates() -> &'static str {
+        "get_exchange_rates"
     }
 }

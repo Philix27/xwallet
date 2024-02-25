@@ -1,8 +1,9 @@
 use std::fmt::Display;
 
 use serde::{Deserialize, Serialize};
+use utoipa::ToSchema;
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(ToSchema, Serialize, Deserialize, Debug)]
 pub struct SendEmailDto {
     pub msg: String,
     pub user_id: String,

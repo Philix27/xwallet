@@ -1,76 +1,13 @@
-[08:21:16][xwallet::config::logger][INFO] INFO output enabled
-[08:21:16][xwallet::config::logger][WARN] WARN output enabled
-[08:21:16][xwallet::config::logger][ERROR] ERROR output enabled
-[08:21:16][xwallet][INFO] starting HTTP server on port 6000
-[08:21:16][xwallet][INFO] GraphiQL playground: http://localhost:6000/graphiql
-[08:21:16][xwallet][INFO] Env: CARGO /Users/philix/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo
-[08:21:16][xwallet][INFO] Env: CARGO_HOME /Users/philix/.cargo
-[08:21:16][xwallet][INFO] Env: CARGO_MANIFEST_DIR /Users/philix/Documents/Codebase/xwallet
-[08:21:16][xwallet][INFO] Env: CARGO_PKG_AUTHORS 
-[08:21:16][xwallet][INFO] Env: CARGO_PKG_DESCRIPTION 
-[08:21:16][xwallet][INFO] Env: CARGO_PKG_HOMEPAGE 
-[08:21:16][xwallet][INFO] Env: CARGO_PKG_LICENSE 
-[08:21:16][xwallet][INFO] Env: CARGO_PKG_LICENSE_FILE 
-[08:21:16][xwallet][INFO] Env: CARGO_PKG_NAME xwallet
-[08:21:16][xwallet][INFO] Env: CARGO_PKG_README README.md
-[08:21:16][xwallet][INFO] Env: CARGO_PKG_REPOSITORY 
-[08:21:16][xwallet][INFO] Env: CARGO_PKG_RUST_VERSION 
-[08:21:16][xwallet][INFO] Env: CARGO_PKG_VERSION 0.1.0
-[08:21:16][xwallet][INFO] Env: CARGO_PKG_VERSION_MAJOR 0
-[08:21:16][xwallet][INFO] Env: CARGO_PKG_VERSION_MINOR 1
-[08:21:16][xwallet][INFO] Env: CARGO_PKG_VERSION_PATCH 0
-[08:21:16][xwallet][INFO] Env: CARGO_PKG_VERSION_PRE 
-[08:21:16][xwallet][INFO] Env: COLORTERM truecolor
-[08:21:16][xwallet][INFO] Env: COMMAND_MODE unix2003
-[08:21:16][xwallet][INFO] Env: DYLD_FALLBACK_LIBRARY_PATH /Users/philix/Documents/Codebase/xwallet/target/debug/build/argonautica-e26e962487d96e0d/out:/Users/philix/Documents/Codebase/xwallet/target/debug/build/libloading-c1301a138d6c8772/out:/Users/philix/Documents/Codebase/xwallet/target/debug/build/psm-45b764e4af94068f/out:/Users/philix/Documents/Codebase/xwallet/target/debug/build/ring-183f5c4a0689c2d2/out:/Users/philix/Documents/Codebase/xwallet/target/debug/build/zstd-sys-9664a5ebe867e44d/out:/Users/philix/Documents/Codebase/xwallet/target/debug/deps:/Users/philix/Documents/Codebase/xwallet/target/debug:/Users/philix/.rustup/toolchains/stable-aarch64-apple-darwin/lib/rustlib/aarch64-apple-darwin/lib:/Users/philix/.rustup/toolchains/stable-aarch64-apple-darwin/lib:/Users/philix/lib:/usr/local/lib:/usr/lib
-[08:21:16][xwallet][INFO] Env: GIT_ASKPASS /Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh
-[08:21:16][xwallet][INFO] Env: HOME /Users/philix
-[08:21:16][xwallet][INFO] Env: HOMEBREW_CELLAR /opt/homebrew/Cellar
-[08:21:16][xwallet][INFO] Env: HOMEBREW_PREFIX /opt/homebrew
-[08:21:16][xwallet][INFO] Env: HOMEBREW_REPOSITORY /opt/homebrew
-[08:21:16][xwallet][INFO] Env: INFOPATH /opt/homebrew/share/info:/opt/homebrew/share/info:
-[08:21:16][xwallet][INFO] Env: LANG en_US.UTF-8
-[08:21:16][xwallet][INFO] Env: LOGNAME philix
-[08:21:16][xwallet][INFO] Env: LaunchInstanceID B152F3DC-77B6-4D22-979C-93ABBC3B4B03
-[08:21:16][xwallet][INFO] Env: MANPATH /opt/homebrew/share/man:/usr/share/man:/usr/local/share/man:/opt/homebrew/share/man::
-[08:21:16][xwallet][INFO] Env: MallocNanoZone 0
-[08:21:16][xwallet][INFO] Env: OLDPWD /Users/philix/Documents/Codebase/xwallet
-[08:21:16][xwallet][INFO] Env: ORIGINAL_XDG_CURRENT_DESKTOP undefined
-[08:21:16][xwallet][INFO] Env: PATH /opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/philix/.cargo/bin
-[08:21:16][xwallet][INFO] Env: PWD /Users/philix/Documents/Codebase/xwallet
-[08:21:16][xwallet][INFO] Env: RUSTUP_HOME /Users/philix/.rustup
-[08:21:16][xwallet][INFO] Env: RUSTUP_TOOLCHAIN stable-aarch64-apple-darwin
-[08:21:16][xwallet][INFO] Env: RUST_RECURSION_COUNT 1
-[08:21:16][xwallet][INFO] Env: SECURITYSESSIONID 186a6
-[08:21:16][xwallet][INFO] Env: SHELL /bin/zsh
-[08:21:16][xwallet][INFO] Env: SHLVL 1
-[08:21:16][xwallet][INFO] Env: SSH_AUTH_SOCK /private/tmp/com.apple.launchd.MLxD7lldUC/Listeners
-[08:21:16][xwallet][INFO] Env: TERM xterm-256color
-[08:21:16][xwallet][INFO] Env: TERM_PROGRAM vscode
-[08:21:16][xwallet][INFO] Env: TERM_PROGRAM_VERSION 1.78.2
-[08:21:16][xwallet][INFO] Env: TMPDIR /var/folders/69/_n1pn2hx5jz67b85h92dxzy00000gn/T/
-[08:21:16][xwallet][INFO] Env: USER philix
-[08:21:16][xwallet][INFO] Env: USER_ZDOTDIR /Users/philix
-[08:21:16][xwallet][INFO] Env: VSCODE_GIT_ASKPASS_EXTRA_ARGS --ms-enable-electron-run-as-node
-[08:21:16][xwallet][INFO] Env: VSCODE_GIT_ASKPASS_MAIN /Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js
-[08:21:16][xwallet][INFO] Env: VSCODE_GIT_ASKPASS_NODE /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)
-[08:21:16][xwallet][INFO] Env: VSCODE_GIT_IPC_HANDLE /var/folders/69/_n1pn2hx5jz67b85h92dxzy00000gn/T/vscode-git-e9d6dbc4ec.sock
-[08:21:16][xwallet][INFO] Env: VSCODE_INJECTION 1
-[08:21:16][xwallet][INFO] Env: XPC_FLAGS 0x0
-[08:21:16][xwallet][INFO] Env: XPC_SERVICE_NAME 0
-[08:21:16][xwallet][INFO] Env: ZDOTDIR /Users/philix
-[08:21:16][xwallet][INFO] Env: _ /Users/philix/.cargo/bin/cargo
-[08:21:16][xwallet][INFO] Env: __CFBundleIdentifier com.microsoft.VSCode
-[08:21:16][xwallet][INFO] Env: __CF_USER_TEXT_ENCODING 0x1F5:0x0:0x0
-[08:21:16][xwallet][INFO] Env: PORT 6000
-[08:21:16][xwallet][INFO] Env: LOG_LEVEL INFO
-[08:21:16][xwallet][INFO] Env: LOG_FILE server.log
-[08:21:16][xwallet][INFO] Env: DATABASE_URL postgres://postgres@localhost:5432/postgres
-[08:21:16][xwallet][INFO] Env: JWT_SECRET 
-[08:21:16][xwallet][INFO] Env: HASH_SECRET 
-[08:21:16][actix_server::builder][INFO] starting 2 workers
-[08:21:16][actix_server::server][INFO] Actix runtime found; starting in Actix runtime
-[08:21:28][actix_server::server][INFO] SIGINT received; starting forced shutdown
-[08:21:28][actix_server::accept][INFO] accept thread stopped
-[08:21:28][actix_server::worker][INFO] shutting down idle worker
-[08:21:28][actix_server::worker][INFO] shutting down idle worker
+[07:19:09][xwallet::config::logger][INFO] INFO output enabled
+[07:19:09][xwallet::config::logger][WARN] WARN output enabled
+[07:19:09][xwallet::config::logger][ERROR] ERROR output enabled
+[07:19:09][xwallet][INFO] starting HTTP server on port 6000
+[07:19:09][xwallet][INFO] GraphiQL playground: http://localhost:6000/graphiql
+[07:19:09][actix_server::builder][INFO] starting 2 workers
+[07:19:09][actix_server::server][INFO] Actix runtime found; starting in Actix runtime
+[07:21:57][actix_web::middleware::logger][INFO] 127.0.0.1 "POST /auth/send_email_otp HTTP/1.1" 200 39 "-" "Thunder Client (https://www.thunderclient.com)" 0.000670
+[07:22:33][actix_web::middleware::logger][INFO] 127.0.0.1 "POST /auth/send_email_otp HTTP/1.1" 200 39 "-" "Thunder Client (https://www.thunderclient.com)" 0.000535
+[18:24:20][actix_server::server][INFO] SIGINT received; starting forced shutdown
+[18:24:20][actix_server::accept][INFO] accept thread stopped
+[18:24:20][actix_server::worker][INFO] shutting down idle worker
+[18:24:20][actix_server::worker][INFO] shutting down idle worker

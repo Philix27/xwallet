@@ -3,19 +3,27 @@ use super::traits::IPayment;
 pub struct PaymentService;
 
 impl IPayment for PaymentService {
-    async fn provide_personal_details() -> &'static str {
-        "provide_personal_details"
+    async fn debit_card() -> &'static str {
+       "opposite"
     }
 
-    async fn provide_bank_details() -> &'static str {
-        "provide_bank_details"
+    async fn move_from_fiat_to_crypto() -> &'static str {
+       "opposite"
     }
 
-    async fn compliance_status() -> &'static str {
-        "compliance_status"
+    async fn move_from_crypto_to_crypto() -> &'static str {
+       "opposite"
     }
 
-    async fn provide_documents() -> &'static str {
-        "provide_documents"
+    async fn withdraw_fiat() -> &'static str {
+       "opposite"
+    }
+
+    async fn send_crypto_to_external_wallet() -> &'static str {
+       "opposite"
+    }
+
+    async fn send_fiat_to_external_bank_account() -> &'static str {
+       "opposite"
     }
 }

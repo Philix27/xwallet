@@ -1,6 +1,5 @@
-pub trait IFx {
-    async fn provide_personal_details() -> &'static str;
-    async fn provide_bank_details() -> &'static str;
-    async fn compliance_status() -> &'static str;
-    async fn provide_documents() -> &'static str;
+pub trait IFxRoutes {
+    async fn get_currencies() -> &'static str;
+    async fn get_exchanges() -> &'static str;
+    async fn get_exchange_rates() -> &'static str;
 }
