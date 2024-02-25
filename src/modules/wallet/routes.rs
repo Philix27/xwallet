@@ -1,13 +1,17 @@
 use actix_web::web;
+use actix_web_httpauth::middleware::HttpAuthentication;
 
 use crate::models::country::list::Countries;
 use crate::models::country::Country;
+use crate::modules::AuthServices;
 
 pub struct WalletRoutes;
 
 impl WalletRoutes {
     pub fn routes_handler() -> actix_web::Scope {
+        let middleware = HttpAuthentication::bearer(AuthServices::validator);
         web::scope("/wallets")
+            // .wrap(middleware())
             .route("/", web::get().to(Self::index))
             .route("/", web::post().to(Self::new_tag))
     }

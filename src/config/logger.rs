@@ -1,10 +1,10 @@
 use log::{debug, error, info, trace, warn};
 use std::fs;
 
-use crate::config::APP_ENV;
+use crate::config::AppEnv;
 
 pub fn init() -> Result<(), fern::InitError> {
-    let log_level = APP_ENV
+    let log_level = AppEnv::new()
         .log_level
         .parse::<log::LevelFilter>()
         .unwrap_or(log::LevelFilter::Info);
@@ -24,7 +24,7 @@ pub fn init() -> Result<(), fern::InitError> {
         .chain(std::io::stderr());
 
     // also log to file if one is provided via env
-    let log_file = fs::File::create(APP_ENV.log_file)?;
+    let log_file = fs::File::create(AppEnv::new().log_file)?;
     builder = builder.chain(log_file);
 
     // globally apply logger

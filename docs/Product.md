@@ -7,7 +7,8 @@ A wallet that can be used to buy USDT and hold and swap back to base naira curre
 
 - Authentication & Authorization service
     - 2FA
-    - KYC
+- Compliance service
+   - KYC
 - Notification service
 - Create Wallets
     - Nigerian based wallet  i.e Virtual Bank Account
