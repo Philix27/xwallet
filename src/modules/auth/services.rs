@@ -9,7 +9,7 @@ use actix_web_httpauth::{
     middleware::HttpAuthentication,
 };
 use hmac::{digest::KeyInit, Hmac};
-use jwt::{claims, VerifyWithKey};
+use jwt::VerifyWithKey;
 use sha2::Sha256;
 
 use crate::{
@@ -87,7 +87,7 @@ impl super::traits::IAuth for AuthServices {
         "verify_email_otp!"
     }
 
-    async fn send_email_otp(body: Json<dtos::SendEmailDto>) -> String {
+    async fn send_email_otp(_body: Json<dtos::SendEmailDto>) -> String {
         format!("send_email_otp!")
     }
 }

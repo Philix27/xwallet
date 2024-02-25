@@ -8,10 +8,10 @@ pub struct NotificationServices;
 impl NotificationServices {
     async fn msg_phone(body: termii::PhoneBody) -> Result<termii::PhoneResponse, Error> {
         Ok(termii::PhoneResponse {
-            message_id: todo!(),
-            message: todo!(),
-            balance: todo!(),
-            user: todo!(),
+            message_id: body.sms,
+            message: body.from,
+            balance: 23,
+            user: body.to,
         })
     }
     async fn bulk_msg_to_phone() -> String {

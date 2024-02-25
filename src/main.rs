@@ -2,7 +2,7 @@ mod config;
 mod integration;
 mod models;
 mod modules;
-mod schema;
+
 
 use crate::{config::AppEnv, modules::app::AppState};
 

@@ -9,7 +9,7 @@ pub struct SendEmailDto {
 }
 
 impl Display for SendEmailDto {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+    fn fmt(&self, _f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         //    Ok( format!("msg: {}, user_id: {}", self.msg, self.user_id))
         Ok(())
     }
